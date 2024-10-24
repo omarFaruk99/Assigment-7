@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "name": "Virat Kohli",
+      "role": "Batsman",
+      "team": "India",
+      "country": "India",
+      "batting_style": "Right-hand bat",
+      "bowling_style": "Right-arm medium",
+      "price": 95,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Babar Azam",
+      "role": "Batsman",
+      "team": "Pakistan",
+      "country": "Pakistan",
+      "batting_style": "Right-hand bat",
+      "bowling_style": "Right-arm offbreak",
+      "price": 90,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Joe Root",
+      "role": "Batsman",
+      "team": "England",
+      "country": "England",
+      "batting_style": "Right-hand bat",
+      "bowling_style": "Right-arm offbreak",
+      "price": 85,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    },
+    {
+      "id": 4,
+      "name": "David Warner",
+      "role": "Batsman",
+      "team": "Australia",
+      "country": "Australia",
+      "batting_style": "Left-hand bat",
+      "bowling_style": "Right-arm legbreak",
+      "price": 88,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Kane Williamson",
+      "role": "Batsman",
+      "team": "New Zealand",
+      "country": "New Zealand",
+      "batting_style": "Right-hand bat",
+      "bowling_style": "Right-arm offbreak",
+      "price": 80,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Shakib Al Hasan",
+      "role": "Allrounder",
+      "team": "Bangladesh",
+      "country": "Bangladesh",
+      "batting_style": "Left-hand bat",
+      "bowling_style": "Left-arm orthodox spin",
+      "price": 75,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Pat Cummins",
+      "role": "Bowler",
+      "team": "Australia",
+      "country": "Australia",
+      "batting_style": "Right-hand bat",
+      "bowling_style": "Right-arm fast",
+      "price": 92,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Jasprit Bumrah",
+      "role": "Bowler",
+      "team": "India",
+      "country": "India",
+      "batting_style": "Right-hand bat",
+      "bowling_style": "Right-arm fast",
+      "price": 87,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Trent Boult",
+      "role": "Bowler",
+      "team": "New Zealand",
+      "country": "New Zealand",
+      "batting_style": "Left-hand bat",
+      "bowling_style": "Left-arm fast-medium",
+      "price": 82,
+      "img": "https://i.ibb.co.com/56xkdC5/shakib.jpg"
+    }
+  ]
+  
