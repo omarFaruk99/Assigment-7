@@ -1,9 +1,18 @@
 import PropTypes from "prop-types";
 import SelectedPlayers from "../assets/SelectedPlayers/SelectedPlayers";
 import AvailablePlayers from "../AvailablePlayers/AvailablePlayers";
+import { useState } from "react";
 
 const ToggleBtns = ({ handleToggleBtns, toggleBtns }) => {
-  //   console.log(handleToggleBtns);
+  // choose player
+  const [choosePlayer, setChoosePlayer] = useState([]);
+
+  //choose player handlder
+  const handleChoosePlayer = (singlePlayer) => {
+    const newChoosePlayer = [...choosePlayer, singlePlayer];
+    setChoosePlayer(newChoosePlayer);
+  };
+
   return (
     <div>
       <div className="flex justify-end">
@@ -21,14 +30,16 @@ const ToggleBtns = ({ handleToggleBtns, toggleBtns }) => {
             toggleBtns ? "" : "bg-lime-300"
           }`}
         >
-          Selected(0)
+          Selected({choosePlayer.length})
         </button>
       </div>
 
       {toggleBtns ? (
-        <AvailablePlayers></AvailablePlayers>
+        <AvailablePlayers
+          handleChoosePlayer={handleChoosePlayer}
+        ></AvailablePlayers>
       ) : (
-        <SelectedPlayers></SelectedPlayers>
+        <SelectedPlayers choosePlayer={choosePlayer}></SelectedPlayers>
       )}
     </div>
   );

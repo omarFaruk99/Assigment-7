@@ -8,6 +8,9 @@ function App() {
   // toggle btns
   const [toggleBtns, setToggleBtns] = useState(true);
 
+  // claim free credit 'useState'
+  const [claimCredit, setClaimCredit] = useState(0);
+
   // toggle btns handler
   const handleToggleBtns = (btn) => {
     if (btn === 1) {
@@ -18,11 +21,16 @@ function App() {
     console.log(toggleBtns);
   };
 
+  // claim free credit handeler
+  const handleFreeCredit = () => {
+    setClaimCredit((previousAmount) => previousAmount + 500);
+  };
+
   return (
     <>
       <div className="w-11/12 mx-auto">
-        <Navbar></Navbar>
-        <Banner></Banner>
+        <Navbar claimCredit={claimCredit}></Navbar>
+        <Banner handleFreeCredit={handleFreeCredit}></Banner>
         <div className="mt-14 border-2 border-blue-500">
           <ToggleBtns
             toggleBtns={toggleBtns}

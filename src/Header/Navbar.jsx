@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import logo from "../assets/Images/logo.png";
 import { TbCoin } from "react-icons/tb";
-const Navbar = () => {
+const Navbar = ({ claimCredit }) => {
   return (
     <div>
       <div className="flex justify-between border-2 border-green-500 items-center mt-12">
@@ -13,7 +14,7 @@ const Navbar = () => {
           <p>Teams</p>
           <p>Schedules</p>
           <p className="font-semibold border-2 border-stone-200 p-2 rounded-lg flex items-center">
-            0 Coin
+            {claimCredit} Coin
             <span className="ml-1">
               <TbCoin size={25} color="gold" />
             </span>
@@ -24,4 +25,7 @@ const Navbar = () => {
   );
 };
 
+Navbar.propTypes = {
+  claimCredit: PropTypes.number,
+};
 export default Navbar;

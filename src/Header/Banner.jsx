@@ -1,6 +1,7 @@
 import bgimg from "../assets/Images/bg-shadow.png";
 import bannerImg from "../assets/Images/banner-main.png";
-const Banner = () => {
+import PropTypes from "prop-types";
+const Banner = ({ handleFreeCredit }) => {
   const bannerStyle = {
     backgroundImage: `url(${bgimg})`,
     backgroundSize: "cover",
@@ -25,7 +26,10 @@ const Banner = () => {
               Breaking Barriers, Reaching New Heights
             </p>
             <div className="border border-lime-300 inline-block p-2 rounded-2xl">
-              <button className="bg-lime-300 p-4 rounded-xl text-black font-semibold">
+              <button
+                onClick={() => handleFreeCredit()}
+                className="bg-lime-300 p-4 rounded-xl text-black font-semibold"
+              >
                 Clain Free Credit
               </button>
             </div>
@@ -36,4 +40,7 @@ const Banner = () => {
   );
 };
 
+Banner.propTypes = {
+  handleFreeCredit: PropTypes.func.isRequired,
+};
 export default Banner;
