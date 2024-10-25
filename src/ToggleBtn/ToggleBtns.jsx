@@ -10,7 +10,7 @@ const ToggleBtns = ({ handleToggleBtns, toggleBtns }) => {
         <button
           onClick={() => handleToggleBtns(1)}
           className={`border-2 border-slate-300 p-2 rounded-lg font-semibold ${
-            toggleBtns ? "bg-lime-500" : ""
+            toggleBtns ? "bg-lime-300" : ""
           }`}
         >
           Available
@@ -18,7 +18,7 @@ const ToggleBtns = ({ handleToggleBtns, toggleBtns }) => {
         <button
           onClick={() => handleToggleBtns(0)}
           className={`border-2 border-slate-300 p-2 rounded-lg font-semibold ${
-            toggleBtns ? "" : "bg-lime-500"
+            toggleBtns ? "" : "bg-lime-300"
           }`}
         >
           Selected(0)

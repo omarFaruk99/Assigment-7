@@ -24,11 +24,9 @@ const Banner = () => {
             <p className="text-2xl font-medium">
               Breaking Barriers, Reaching New Heights
             </p>
-            <div>
-              <button className="border-2 border-lime-500 p-3 rounded-2xl relative inline-block">
-                <span className="bg-lime-500 p-3 rounded-xl block font-semibold">
-                  Clain Free Credit
-                </span>
+            <div className="border border-lime-300 inline-block p-2 rounded-2xl">
+              <button className="bg-lime-300 p-4 rounded-xl text-black font-semibold">
+                Clain Free Credit
               </button>
             </div>
           </div>
