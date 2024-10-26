@@ -4,13 +4,30 @@ import AvailablePlayers from "../AvailablePlayers/AvailablePlayers";
 import { useState } from "react";
 
 const ToggleBtns = ({ handleToggleBtns, toggleBtns }) => {
-  // choose player
+  // select player
   const [choosePlayer, setChoosePlayer] = useState([]);
 
-  //choose player handlder
+  //handle selected player
   const handleChoosePlayer = (singlePlayer) => {
-    const newChoosePlayer = [...choosePlayer, singlePlayer];
-    setChoosePlayer(newChoosePlayer);
+    const isExistPlayer = choosePlayer.find(
+      (player) => singlePlayer.id === player.id
+    );
+
+    if (isExistPlayer) {
+      alert(`${singlePlayer.name} already selected`);
+    } else {
+      const newChoosePlayer = [...choosePlayer, singlePlayer];
+      setChoosePlayer(newChoosePlayer);
+    }
+  };
+
+  //handle delete player from selected section
+  const handleDeletePlayer = (idDeletePlayer) => {
+    // it filter delete player and return ohters player as an array
+    const remainingPlayer = choosePlayer.filter(
+      (player) => player.id !== idDeletePlayer
+    );
+    setChoosePlayer(remainingPlayer);
   };
 
   return (
@@ -39,7 +56,10 @@ const ToggleBtns = ({ handleToggleBtns, toggleBtns }) => {
           handleChoosePlayer={handleChoosePlayer}
         ></AvailablePlayers>
       ) : (
-        <SelectedPlayers choosePlayer={choosePlayer}></SelectedPlayers>
+        <SelectedPlayers
+          choosePlayer={choosePlayer}
+          handleDeletePlayer={handleDeletePlayer}
+        ></SelectedPlayers>
       )}
     </div>
   );
