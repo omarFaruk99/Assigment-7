@@ -97,6 +97,17 @@
       "bowling_style": "Left-arm fast-medium",
       "price": 82,
       "img": "https://i.ibb.co.com/Qb0txGt/shakib-latest.webp"
+    },
+    {
+      "id": 10,
+      "name": "Omar Faruk",
+      "role": "Bowler",
+      "team": "Bangladesh",
+      "country": "Bangladesh",
+      "batting_style": "Right-hand bat",
+      "bowling_style": "Right-arm fast-medium",
+      "price": 100,
+      "img": "https://i.ibb.co.com/Qb0txGt/shakib-latest.webp"
     }
   ]
   

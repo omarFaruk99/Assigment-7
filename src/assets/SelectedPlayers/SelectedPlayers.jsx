@@ -9,7 +9,7 @@ const SelectedPlayers = ({
   return (
     <div>
       <h1 className="font-bold text-2xl mb-2">
-        Selected Players({choosePlayer.length}/9)
+        Selected Players({choosePlayer.length}/6)
       </h1>
       {choosePlayer.map((player, idx) => (
         <div
