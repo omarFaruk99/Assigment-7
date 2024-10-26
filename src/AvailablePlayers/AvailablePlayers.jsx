@@ -17,7 +17,7 @@ const AvailablePlayers = ({ handleChoosePlayer }) => {
 
   return (
     <div>
-      <h1 className="font-bold text-2xl">AvailablePlayers.jsx</h1>
+      <h1 className="font-bold text-2xl mb-2">Available Players</h1>
       <div className="grid grid-cols-3 gap-3">
         {availablePlayers.map((singPlayer, indx) => {
           return (

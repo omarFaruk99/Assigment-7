@@ -18,13 +18,31 @@ function App() {
     } else {
       setToggleBtns(false);
     }
-    console.log(toggleBtns);
   };
 
   // claim free credit handeler
   const handleFreeCredit = () => {
-    setClaimCredit((previousAmount) => previousAmount + 500);
+    const totalAmount = claimCredit + 50;
+    // setClaimCredit((previousAmount) => previousAmount + 50);
+    setClaimCredit(totalAmount);
   };
+
+  // Decrease amount
+  const decreaseAmout = (choosePlayerAmount) => {
+    setClaimCredit((previouseAmount) => previouseAmount - choosePlayerAmount);
+  };
+
+  //after delete a player it increase total amount
+  const increaseAmount = (deletePlayer) => {
+    const updateTotalPrice = claimCredit + deletePlayer.price;
+    setClaimCredit(updateTotalPrice);
+  };
+
+  //function to deduct money
+  // const deductMoney = (playerDeductAmount) =>{
+  //   const latestAmount = claimCredit-playerDeductAmount
+
+  // }
 
   return (
     <>
@@ -35,6 +53,9 @@ function App() {
           <ToggleBtns
             toggleBtns={toggleBtns}
             handleToggleBtns={handleToggleBtns}
+            claimCredit={claimCredit}
+            decreaseAmout={decreaseAmout}
+            increaseAmount={increaseAmount}
           ></ToggleBtns>
         </div>
       </div>

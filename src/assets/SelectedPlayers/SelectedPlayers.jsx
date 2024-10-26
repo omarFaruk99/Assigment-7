@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import { MdDelete } from "react-icons/md";
-const SelectedPlayers = ({ choosePlayer, handleDeletePlayer }) => {
-  console.log(choosePlayer);
+const SelectedPlayers = ({
+  choosePlayer,
+  handleDeletePlayer,
+  handleToggleBtns,
+}) => {
+  // console.log(choosePlayer);
   return (
     <div>
       <h1 className="font-bold text-2xl mb-2">
@@ -17,6 +21,7 @@ const SelectedPlayers = ({ choosePlayer, handleDeletePlayer }) => {
             <div>
               <h2 className="font-semibold text-2xl">{player.name}</h2>
               <p className="text-gray-500">{player.role}</p>
+              <p className="text-gray-500">Price: ${player.price}</p>
             </div>
             <div>
               <button onClick={() => handleDeletePlayer(player.id)}>
@@ -26,6 +31,14 @@ const SelectedPlayers = ({ choosePlayer, handleDeletePlayer }) => {
           </div>
         </div>
       ))}
+      <div className="border-2 border-lime-300 p-2 inline-block rounded-lg bg-lime-50">
+        <button
+          onClick={() => handleToggleBtns(1)}
+          className="bg-lime-300 p-3 rounded-lg font-medium"
+        >
+          Add More Player
+        </button>
+      </div>
     </div>
   );
 };
