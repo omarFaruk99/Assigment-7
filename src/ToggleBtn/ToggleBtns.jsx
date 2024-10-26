@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import SelectedPlayers from "../assets/SelectedPlayers/SelectedPlayers";
 import AvailablePlayers from "../AvailablePlayers/AvailablePlayers";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const ToggleBtns = ({
   handleToggleBtns,
@@ -16,17 +17,26 @@ const ToggleBtns = ({
   //handle selected player
   const handleChoosePlayer = (singlePlayer) => {
     if (choosePlayer.length >= 6) {
-      alert("Don't add more than 6 players");
+      toast.info("haven't add more than 6 players", {
+        position: "top-center",
+        autoClose: 3000,
+      });
     } else {
       const isExistPlayer = choosePlayer.find(
         (player) => singlePlayer.id === player.id
       );
 
       if (singlePlayer.price > claimCredit) {
-        alert("Insufficient Balance");
+        toast.error("Insufficient Balance", {
+          position: "top-center",
+          autoClose: 3000,
+        });
       } else {
         if (isExistPlayer) {
-          alert(`${singlePlayer.name} already selected`);
+          toast.info(`${singlePlayer.name} already selected`, {
+            position: "top-center",
+            autoClose: 3000,
+          });
         } else {
           decreaseAmout(singlePlayer.price); //it decrease current player price from the balance
           // ..........................................................
@@ -83,8 +93,7 @@ const ToggleBtns = ({
         <SelectedPlayers
           choosePlayer={choosePlayer}
           handleDeletePlayer={handleDeletePlayer}
-          handleToggleBtns ={handleToggleBtns}
-
+          handleToggleBtns={handleToggleBtns}
         ></SelectedPlayers>
       )}
     </div>

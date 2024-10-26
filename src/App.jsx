@@ -1,8 +1,11 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import "./App.css";
 import Banner from "./Header/Banner";
 import Navbar from "./Header/Navbar";
 import ToggleBtns from "./ToggleBtn/ToggleBtns";
+import { toast } from "react-toastify";
 
 function App() {
   // toggle btns
@@ -24,6 +27,10 @@ function App() {
   const handleFreeCredit = () => {
     const totalAmount = claimCredit + 50;
     // setClaimCredit((previousAmount) => previousAmount + 50);
+    toast.success("Succeded to Add Coins!", {
+      position: "top-center",
+      autoClose: 3000,
+    });
     setClaimCredit(totalAmount);
   };
 
@@ -57,6 +64,7 @@ function App() {
             decreaseAmout={decreaseAmout}
             increaseAmount={increaseAmount}
           ></ToggleBtns>
+          <ToastContainer />
         </div>
       </div>
     </>
