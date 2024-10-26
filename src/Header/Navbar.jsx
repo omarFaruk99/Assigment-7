@@ -1,10 +1,26 @@
 import PropTypes from "prop-types";
 import logo from "../assets/Images/logo.png";
 import { TbCoin } from "react-icons/tb";
+import { useEffect, useState } from "react";
 const Navbar = ({ claimCredit }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // Change to true when scrolled past 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div>
-      <div className="flex justify-between border-2 border-green-500 items-center mt-12">
+    <div
+      className={`sticky z-50 top-0 bg-white ${
+        isScrolled ? "bg-white bg-opacity-90" : "bg-transparent"
+      }`}
+    >
+      <div className="flex justify-between items-center mt-12">
         <div>
           <img className="h-16" src={logo} alt="" />
         </div>

@@ -46,6 +46,7 @@ const SelectedPlayers = ({
 SelectedPlayers.propTypes = {
   choosePlayer: PropTypes.array.isRequired,
   handleDeletePlayer: PropTypes.func.isRequired,
+  handleToggleBtns: PropTypes.func.isRequired,
 };
 
 export default SelectedPlayers;

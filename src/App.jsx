@@ -6,6 +6,7 @@ import Banner from "./Header/Banner";
 import Navbar from "./Header/Navbar";
 import ToggleBtns from "./ToggleBtn/ToggleBtns";
 import { toast } from "react-toastify";
+import Footer from "./Footer/Footer";
 
 function App() {
   // toggle btns
@@ -53,10 +54,11 @@ function App() {
 
   return (
     <>
-      <div className="w-11/12 mx-auto">
+      <div>
+      <div className="w-11/12 mx-auto mb-48">
         <Navbar claimCredit={claimCredit}></Navbar>
         <Banner handleFreeCredit={handleFreeCredit}></Banner>
-        <div className="mt-14 border-2 border-blue-500">
+        <div className="mt-14">
           <ToggleBtns
             toggleBtns={toggleBtns}
             handleToggleBtns={handleToggleBtns}
@@ -66,6 +68,8 @@ function App() {
           ></ToggleBtns>
           <ToastContainer />
         </div>
+      </div>
+      <Footer></Footer>
       </div>
     </>
   );
