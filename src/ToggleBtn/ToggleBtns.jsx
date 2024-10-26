@@ -69,7 +69,7 @@ const ToggleBtns = ({
       <div className="flex justify-end">
         <button
           onClick={() => handleToggleBtns(1)}
-          className={` p-2 rounded-l-lg font-semibold border-l-2-2 border-t-2 border-b-2 ${
+          className={` p-2 rounded-l-lg font-semibold border-l-2 border-t-2 border-b-2 ${
             toggleBtns ? "bg-lime-300" : ""
           }`}
         >
@@ -77,7 +77,7 @@ const ToggleBtns = ({
         </button>
         <button
           onClick={() => handleToggleBtns(0)}
-          className={`border-r-2-2 border-t-2 border-b-2 p-2 border-gray-200 rounded-r-lg font-semibold ${
+          className={`border-r-2 border-t-2 border-b-2 p-2 border-gray-200 rounded-r-lg font-semibold ${
             toggleBtns ? "" : "bg-lime-300"
           }`}
         >
