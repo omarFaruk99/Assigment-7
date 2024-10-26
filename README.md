@@ -23,3 +23,8 @@ Users can add a virtual currency balance, select up to six players within this b
 3. **Newsletter Subscription**:
    - Users can subscribe to a newsletter to receive daily updates, enhancing engagement with regular cricket insights and news.
 
+## Live Demo
+
+You can view a live demo of the project at the following link:
+
+[Live Demo](https://darling-cupcake-840a90.netlify.app/)
